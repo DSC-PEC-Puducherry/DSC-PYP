@@ -2,6 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:pec_yellow_pages/screen/About_us/About_main.dart';
+import 'package:pec_yellow_pages/screen/Misc/add.dart';
+import 'package:pec_yellow_pages/screen/Misc/edit.dart';
+import 'package:pec_yellow_pages/screen/Misc/feedback.dart';
 
 class EndDrawer extends StatelessWidget {
   const EndDrawer({
@@ -39,7 +42,11 @@ class EndDrawer extends StatelessWidget {
                         color: Colors.black,
                       ),
                     ),
-                    onTap: null,
+                    onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => Edit()),
+                    );
+                  },
                   )),
                 ),
 
@@ -59,7 +66,11 @@ class EndDrawer extends StatelessWidget {
                       color: Colors.black,
                     ),
                   ),
-                  onTap: null,
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => Add()),
+                    );
+                  },
                 ),
 
                 //3
@@ -78,7 +89,11 @@ class EndDrawer extends StatelessWidget {
                       color: Colors.black,
                     ),
                   ),
-                  onTap: null,
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => FeedBack()),
+                    );
+                  },
                 ),
 
                 //4
