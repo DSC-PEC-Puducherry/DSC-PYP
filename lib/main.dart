@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
         textTheme: TextTheme(
-          body1: TextStyle(color: ksecondaryColor),
-          body2: TextStyle(color: ksecondaryColor),
+          bodyText2: TextStyle(color: ksecondaryColor),
+          bodyText1: TextStyle(color: ksecondaryColor),
         ),
       ),
       home: HomeScreen(),

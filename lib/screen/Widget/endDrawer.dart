@@ -6,8 +6,8 @@ import 'package:pec_yellow_pages/screen/Misc/add.dart';
 import 'package:pec_yellow_pages/screen/Misc/edit.dart';
 import 'package:pec_yellow_pages/screen/Misc/feedback.dart';
 
-class endDrawer extends StatelessWidget {
-  const endDrawer({
+class EndDrawer extends StatelessWidget {
+  const EndDrawer({
     Key? key,
   }) : super(key: key);
 
