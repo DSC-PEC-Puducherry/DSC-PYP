@@ -3,8 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:pec_yellow_pages/screen/About_us/About_main.dart';
 
-class endDrawer extends StatelessWidget {
-  const endDrawer({
+class EndDrawer extends StatelessWidget {
+  const EndDrawer({
     Key? key,
   }) : super(key: key);
 

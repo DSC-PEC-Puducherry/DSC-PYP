@@ -18,7 +18,7 @@ class Body extends StatelessWidget {
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Row(
-              children: [drop1(), SizedBox(width: 50), drop2()],
+              children: [Drop1(), SizedBox(width: 30), Drop2()],
             ),
           ),
         ),
@@ -31,14 +31,14 @@ class Body extends StatelessWidget {
 }
 
 //------------------------------------------------------------------------------
-class drop1 extends StatefulWidget {
-  const drop1({Key? key}) : super(key: key);
+class Drop1 extends StatefulWidget {
+  const Drop1({Key? key}) : super(key: key);
 
   @override
-  _drop1State createState() => _drop1State();
+  _Drop1State createState() => _Drop1State();
 }
 
-class _drop1State extends State<drop1> {
+class _Drop1State extends State<Drop1> {
   final List<String> dept = ["ACDEMICS", "ADMINISTRATION"];
   String selecteddept = "ACDEMICS";
   @override
@@ -67,14 +67,14 @@ class _drop1State extends State<drop1> {
   }
 }
 
-class drop2 extends StatefulWidget {
-  const drop2({Key? key}) : super(key: key);
+class Drop2 extends StatefulWidget {
+  const Drop2({Key? key}) : super(key: key);
 
   @override
-  _drop2State createState() => _drop2State();
+  _Drop2State createState() => _Drop2State();
 }
 
-class _drop2State extends State<drop2> {
+class _Drop2State extends State<Drop2> {
   final List<String> dept = [
     "CSE",
     "ECE",
