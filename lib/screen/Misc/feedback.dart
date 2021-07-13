@@ -42,7 +42,7 @@ class _State extends State<FeedBack> {
                     ),
                   ],
                 ),
-                
+                new Text("* All fields necessary."),
                 new Container(
                   margin: EdgeInsets.symmetric(vertical: 8),
                   child: Column(
@@ -110,7 +110,7 @@ class _State extends State<FeedBack> {
                   height: 50,
                   width: 300,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {},                 // mailto DSC@PEC.EDU
                     child: new Text(
                       "SEND FEEDBACK",
                       style: TextStyle(
@@ -123,11 +123,28 @@ class _State extends State<FeedBack> {
                       primary: Colors.yellow,
                     ),
                   ),
-                ),
+                ), 
               ],
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: new BottomAppBar(
+        child: Container(
+          height: 50,
+          child: Column(
+            children: <Widget>[
+            new Text(""),  
+            new Text("Feedbacks are sent to DSC-PEC Developers team.",
+            style: TextStyle( 
+              color: Colors.black,
+              fontWeight: FontWeight.bold,              
+              )
+            ),
+            ],
+          ),
+          color: Colors.yellow,
+      ),
       ),
     );
   }

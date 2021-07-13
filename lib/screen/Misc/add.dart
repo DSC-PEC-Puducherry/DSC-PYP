@@ -18,7 +18,7 @@ class _State extends State<Add> {
       ),
       body: SingleChildScrollView(
         child: new Container(
-          padding: new EdgeInsets.all(40.0),
+          padding: new EdgeInsets.all(35.0),
           child: new Center(
             child: new Column(
               children: <Widget>[
@@ -43,6 +43,7 @@ class _State extends State<Add> {
                     ),
                   ],
                 ),
+                new Text("* All fields necessary."),
                 
                 new Container(
                   margin: EdgeInsets.symmetric(vertical: 8),
@@ -143,6 +144,22 @@ class _State extends State<Add> {
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: new BottomAppBar(
+        child: Container(
+          height: 25,
+          child: Column(
+            children: <Widget>[
+            new Text("*NOTE: Subject to Verification.",
+            style: TextStyle( 
+              color: Colors.black,
+              fontWeight: FontWeight.bold,              
+              )
+            ),
+            ],
+          ),
+          color: Colors.yellow,
+      ),
       ),
     );
   }
