@@ -1,5 +1,7 @@
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Edit extends StatefulWidget {
   @override
@@ -16,7 +18,7 @@ class _State extends State<Edit> {
       ),
       body: SingleChildScrollView(
         child: new Container(
-          padding: new EdgeInsets.all(50.0),
+          padding: new EdgeInsets.all(35.0),
           child: new Center(
             child: new Column(
               children: <Widget>[
@@ -25,25 +27,26 @@ class _State extends State<Edit> {
                   children: <Widget>[
                     Text(
                       "Edit ",
-                      style: TextStyle(
+                      style: GoogleFonts.oswald ( textStyle: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
-                      ),
+                      ),),
                     ),
                     Text(
-                      " Contact",
-                      style: TextStyle(
+                      "Contact",
+                      style: GoogleFonts.oswald ( textStyle: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: Colors.yellow,
-                      ),
+                      ),),
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
+                new Text("* All fields necessary."),
+                
                 new Container(
-                  margin: EdgeInsets.symmetric(vertical: 10),
+                  margin: EdgeInsets.symmetric(vertical: 8),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -66,7 +69,7 @@ class _State extends State<Edit> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Icon(Icons.house),
+                      Icon(CupertinoIcons.building_2_fill),
                       SizedBox(height: 7),
                       TextField(
                           decoration: new InputDecoration(
@@ -120,7 +123,7 @@ class _State extends State<Edit> {
                 ),
                 SizedBox(height: 25),
                 new SizedBox(
-                  height: 40,
+                  height: 50,
                   width: 300,
                   child: ElevatedButton(
                     onPressed: () {},
@@ -141,6 +144,23 @@ class _State extends State<Edit> {
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: new BottomAppBar(
+        child: Container(
+          height: 25,
+          child: Column(
+            children: <Widget>[
+            //new Text(""),  
+            new Text("*NOTE: Subject to Verification.",
+            style: TextStyle( 
+              color: Colors.black,
+              fontWeight: FontWeight.bold,              
+              )
+            ),
+            ],
+          ),
+          color: Colors.yellow,
+      ),
       ),
     );
   }

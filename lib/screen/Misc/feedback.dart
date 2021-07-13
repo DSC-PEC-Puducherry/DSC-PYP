@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class FeedBack extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _State extends State<FeedBack> {
       ),
       body: SingleChildScrollView(
         child: new Container(
-          padding: new EdgeInsets.all(50.0),
+          padding: new EdgeInsets.all(40.0),
           child: new Center(
             child: new Column(
               children: <Widget>[
@@ -25,25 +26,25 @@ class _State extends State<FeedBack> {
                   children: <Widget>[
                     Text(
                       "Feedback ",
-                      style: TextStyle(
+                      style: GoogleFonts.oswald ( textStyle: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
-                      ),
+                      ),),
                     ),
                     Text(
                       " Form",
-                      style: TextStyle(
+                      style: GoogleFonts.oswald ( textStyle: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: Colors.yellow,
-                      ),
+                      ),),
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
+                new Text("* All fields necessary."),
                 new Container(
-                  margin: EdgeInsets.symmetric(vertical: 10),
+                  margin: EdgeInsets.symmetric(vertical: 8),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -95,16 +96,21 @@ class _State extends State<FeedBack> {
                                 borderSide: BorderSide(),
                               ),
                               fillColor: Color(0xfff3f3f4),
-                              filled: true))
+                              filled: true
+                              ),
+                              keyboardType: TextInputType.multiline,
+                              minLines: 3,
+                              maxLines: 5,
+                              )
                     ],
                   ),
                 ),
                 SizedBox(height: 25),
                 new SizedBox(
-                  height: 40,
+                  height: 50,
                   width: 300,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {},                 // mailto DSC@PEC.EDU
                     child: new Text(
                       "SEND FEEDBACK",
                       style: TextStyle(
@@ -117,11 +123,28 @@ class _State extends State<FeedBack> {
                       primary: Colors.yellow,
                     ),
                   ),
-                ),
+                ), 
               ],
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: new BottomAppBar(
+        child: Container(
+          height: 50,
+          child: Column(
+            children: <Widget>[
+            new Text(""),  
+            new Text("Feedbacks are sent to DSC-PEC Developers team.",
+            style: TextStyle( 
+              color: Colors.black,
+              fontWeight: FontWeight.bold,              
+              )
+            ),
+            ],
+          ),
+          color: Colors.yellow,
+      ),
       ),
     );
   }
