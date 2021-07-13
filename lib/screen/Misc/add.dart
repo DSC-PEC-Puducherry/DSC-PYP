@@ -1,5 +1,7 @@
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Add extends StatefulWidget {
   @override
@@ -16,7 +18,7 @@ class _State extends State<Add> {
       ),
       body: SingleChildScrollView(
         child: new Container(
-          padding: new EdgeInsets.all(50.0),
+          padding: new EdgeInsets.all(40.0),
           child: new Center(
             child: new Column(
               children: <Widget>[
@@ -25,25 +27,25 @@ class _State extends State<Add> {
                   children: <Widget>[
                     Text(
                       "Add ",
-                      style: TextStyle(
+                      style: GoogleFonts.oswald ( textStyle:  TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
-                      ),
+                      ),),  
                     ),
                     Text(
-                      " Contact",
-                      style: TextStyle(
+                      "Contact",
+                      style: GoogleFonts.oswald ( textStyle: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: Colors.yellow,
-                      ),
+                      ),),
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
+                
                 new Container(
-                  margin: EdgeInsets.symmetric(vertical: 10),
+                  margin: EdgeInsets.symmetric(vertical: 8),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -66,7 +68,7 @@ class _State extends State<Add> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Icon(Icons.house),
+                      Icon(CupertinoIcons.building_2_fill),
                       SizedBox(height: 7),
                       TextField(
                           decoration: new InputDecoration(
@@ -120,7 +122,7 @@ class _State extends State<Add> {
                 ),
                 SizedBox(height: 25),
                 new SizedBox(
-                  height: 40,
+                  height: 50,
                   width: 300,
                   child: ElevatedButton(
                     onPressed: () {},
