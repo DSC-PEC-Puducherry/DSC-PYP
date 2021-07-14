@@ -60,8 +60,8 @@ class DetailsScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     border: Border.all(width: 5, color: Colors.grey),
                   ),
-                  height: 150.0,
-                  width: 140.0,
+                  height: 170.0,
+                  width: 180.0,
                   child: Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
