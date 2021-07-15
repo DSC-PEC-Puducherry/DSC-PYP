@@ -5,6 +5,7 @@ import 'package:pec_yellow_pages/screen/home/components/ItemList.dart';
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    
     return Column(
       children: <Widget>[
         // SEARCH BOX ----------------------------------------------------------
@@ -22,7 +23,7 @@ class Body extends StatelessWidget {
             ),
           ),
         ),
-
+        
         //GRID VIEW PROPERTIES -------------------------------------------------
         ItemList(),
       ],
@@ -33,14 +34,13 @@ class Body extends StatelessWidget {
 //------------------------------------------------------------------------------
 class Drop1 extends StatefulWidget {
   const Drop1({Key? key}) : super(key: key);
-
   @override
   _Drop1State createState() => _Drop1State();
 }
 
 class _Drop1State extends State<Drop1> {
-  final List<String> dept = ["ACDEMICS", "ADMINISTRATION"];
-  String selecteddept = "ACDEMICS";
+  final List<String> dept = ["ACADEMICS", "ADMINISTRATION"];
+  String selecteddept = "ACADEMICS";
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -69,7 +69,6 @@ class _Drop1State extends State<Drop1> {
 
 class Drop2 extends StatefulWidget {
   const Drop2({Key? key}) : super(key: key);
-
   @override
   _Drop2State createState() => _Drop2State();
 }
@@ -82,6 +81,7 @@ class _Drop2State extends State<Drop2> {
     "IT",
     "CHEMICAL",
     "MECHANICAL",
+    "CIVIL",
     "EIE"
   ];
   String selecteddept = "CSE";

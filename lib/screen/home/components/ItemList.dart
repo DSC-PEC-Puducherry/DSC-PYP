@@ -12,7 +12,7 @@ class ItemList extends StatelessWidget {
     return Expanded(
       child: GridView.count(
         crossAxisCount: 3,
-        childAspectRatio: 0.69,
+        childAspectRatio: 0.62,
         children: <Widget>[
           ItemCard(
             img: "selvaraj.jpg",
