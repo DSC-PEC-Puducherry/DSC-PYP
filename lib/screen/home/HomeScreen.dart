@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pec_yellow_pages/screen/EndDrawer/body.dart';
+import 'package:pec_yellow_pages/screen/home/components/body.dart';
 import 'package:pec_yellow_pages/screen/Widget/endDrawer.dart';
 import 'package:pec_yellow_pages/screen/home/components/app_bar.dart';
 
