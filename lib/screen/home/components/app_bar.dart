@@ -4,7 +4,7 @@ import 'package:pec_yellow_pages/screen/Widget/clippbar.dart';
 
 AppBar homeAppBar(BuildContext context) {
   return AppBar(
-    toolbarHeight: 104,
+    toolbarHeight: 108,
     iconTheme: IconThemeData(color: appbarIconColor),
     elevation: 0,
 
@@ -21,7 +21,10 @@ AppBar homeAppBar(BuildContext context) {
       children: [
         Align(
             alignment: Alignment(-80, 0),
-            child: Image.asset("images/pypb.png", height: 75, width: 100)),
+            child: Image.asset(
+              "images/pypb.png",
+              height: 100,
+            )),
         Padding(
           padding: EdgeInsets.only(left: 130),
           child: IconButton(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pec_yellow_pages/Colors.dart';
 import 'package:share/share.dart';
 import 'package:clipboard/clipboard.dart';
@@ -38,10 +39,18 @@ class DetailsScreen extends StatelessWidget {
                     children: [
                       TextSpan(
                           text: "Contact ",
-                          style: TextStyle(color: Colors.yellow, fontSize: 30)),
+                          style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                  color: Colors.yellow,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.w700))),
                       TextSpan(
                           text: " Details",
-                          style: TextStyle(color: Colors.black, fontSize: 30))
+                          style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.w700)))
                     ],
                   ),
                 ),
@@ -84,11 +93,16 @@ class DetailsScreen extends StatelessWidget {
                       backgroundColor: Color.fromRGBO(245, 245, 245, 1),
                       child: Icon(Icons.person, color: Colors.yellow)),
                   SizedBox(width: 20),
-                  Text(text,
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold)),
+                  Text(
+                    text,
+                    style: GoogleFonts.poppins(
+                      textStyle: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -104,11 +118,16 @@ class DetailsScreen extends StatelessWidget {
                       child: Icon(FontAwesomeIcons.building,
                           color: Colors.yellow)),
                   SizedBox(width: 20),
-                  Text(dept,
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold)),
+                  Text(
+                    dept,
+                    style: GoogleFonts.poppins(
+                      textStyle: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -127,10 +146,11 @@ class DetailsScreen extends StatelessWidget {
                 ),
                 SizedBox(width: 20),
                 Text(phone,
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold))
+                    style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600)))
               ]),
             ),
 
@@ -150,10 +170,12 @@ class DetailsScreen extends StatelessWidget {
                   SizedBox(width: 20),
                   Text(
                     email,
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
+                    style: GoogleFonts.poppins(
+                      textStyle: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600),
+                    ),
                   ),
                 ],
               ),

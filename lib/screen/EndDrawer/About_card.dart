@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pec_yellow_pages/Colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -100,17 +101,24 @@ class AboutusCard extends StatelessWidget {
               ),
               Text(
                 name,
-                style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
+                style: GoogleFonts.poppins(
+                  textStyle: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
               ),
               SizedBox(
-                height: 4,
+                height: 2,
               ),
               Text(
                 dept,
-                style: TextStyle(fontSize: 14.1, color: Colors.blue),
+                style: GoogleFonts.poppins(
+                  textStyle: TextStyle(
+                      fontSize: 14,
+                      color: Colors.blue,
+                      fontWeight: FontWeight.w400),
+                ),
               ),
             ],
           ),

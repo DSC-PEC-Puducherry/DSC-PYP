@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pec_yellow_pages/screen/Contact_page/details_screen.dart';
 
 class Contact {
@@ -21,19 +22,28 @@ class ItemList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
+      //Listview builder returns Gridview Builder
       child: ListView.builder(
-        itemCount: 11,
+        itemCount: 11, //make it as 26 as the alphabet size is 26 (a - z)
         itemBuilder: (context, index) {
           return Column(
             children: [
               Padding(
                 padding: EdgeInsets.only(left: 10, top: 10, bottom: 10),
                 child: Align(
-                    alignment: Alignment.topLeft,
-                    child: CircleAvatar(
-                      child: Text(Teacher[index].name[0]),
-                    )),
+                  alignment: Alignment.topLeft,
+
+                  //Alphabet index inside circleAvatar
+                  child: CircleAvatar(
+                    child: Text(Teacher[index].name[0],
+                        style: GoogleFonts.poppins(
+                            textStyle: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.w500))),
+                  ),
+                ),
               ),
+
+              // displays the staff details in grid
               GridView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
@@ -46,66 +56,80 @@ class ItemList extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: EdgeInsets.only(top: 15, right: 8, left: 2),
-                    child: Visibility(
-                      child: Container(
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                  builder: (context) => DetailsScreen(
-                                        text: Teacher[index].name,
-                                        img: "images/" + Teacher[index].img,
-                                        dept: Teacher[index].dept,
-                                        phone: Teacher[index].phone_no,
-                                        email: Teacher[index].email,
-                                      )),
-                            );
-                          },
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(15),
-                            child: PhysicalModel(
-                              color: Colors.white,
-                              shadowColor: Colors.blue,
-                              child: Card(
-                                color: Color.fromRGBO(250, 243, 212, 1),
-                                elevation: 5,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(15.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Center(
-                                        child: CircleAvatar(
-                                          backgroundImage: AssetImage(
-                                              "images/" + Teacher[index].img),
-                                          maxRadius: 34,
-                                        ),
+                    child: Container(
+                      child: InkWell(
+                        //Navigating to Details page
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => DetailsScreen(
+                                      text: Teacher[index].name,
+                                      img: "images/" + Teacher[index].img,
+                                      dept: Teacher[index].dept,
+                                      phone: Teacher[index].phone_no,
+                                      email: Teacher[index].email,
+                                    )),
+                          );
+                        },
+
+                        //Design card
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: PhysicalModel(
+                            color: Colors.white,
+                            shadowColor: Colors.blue,
+
+                            //Card
+                            child: Card(
+                              color: Color.fromRGBO(250, 243, 212, 1),
+                              elevation: 5,
+                              child: Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    //image
+                                    Center(
+                                      child: CircleAvatar(
+                                        backgroundImage: AssetImage(
+                                            "images/" + Teacher[index].img),
+                                        maxRadius: 34,
                                       ),
-                                      SizedBox(
-                                        height: 8.0,
-                                      ),
-                                      Align(
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          Teacher[index].name,
+                                    ),
+                                    SizedBox(
+                                      height: 8.0,
+                                    ),
+
+                                    //Text = name
+                                    Align(
+                                      alignment: Alignment.center,
+                                      child: Text(Teacher[index].name,
+
+                                          //Inorder to avoid overflow ellipses is used ,as staff name may be large
                                           overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.black),
-                                        ),
-                                      ),
-                                      Align(
-                                        alignment: Alignment.center,
-                                        child: Text(
-                                          Teacher[index].dept,
-                                          style: TextStyle(
-                                              fontSize: 15, color: Colors.blue),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                          style: GoogleFonts.poppins(
+                                            textStyle: TextStyle(
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w500,
+                                                color: Colors.black),
+                                          )),
+                                    ),
+
+                                    //Text = department
+                                    Align(
+                                      alignment: Alignment.center,
+                                      child: Text(Teacher[index].dept,
+
+                                          //Inorder to avoid overflow ellipses is used ,as staff name may be large
+                                          overflow: TextOverflow.ellipsis,
+                                          style: GoogleFonts.poppins(
+                                            textStyle: TextStyle(
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w500,
+                                                color: Colors.blue),
+                                          )),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
@@ -131,103 +155,103 @@ List<Contact> Teacher = [
   Contact(
       name: "Selvarajou ka",
       dept: "cse",
-      img: "jc.jpg",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "bjc1",
+      name: "Kavitha Kumar",
       dept: "cse",
-      img: "jc.jpg",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "cjc2",
+      name: "Salini.P",
       dept: "cse",
-      img: "jc.jpg",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "djc3",
+      name: "Akila .V",
       dept: "cse",
-      img: "jc.jpg",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "djc4",
+      name: "Manoharan",
       dept: "cse",
-      img: "jc.jpg",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "ejc5",
+      name: "Sayagraj Francis",
       dept: "cse",
-      img: "jc.jpg",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "gjc6",
-      dept: "cse",
-      img: "jc.jpg",
+      name: "Vijayalakshmi",
+      dept: "ece",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "hjc7",
+      name: "Loganathan",
       dept: "cse",
-      img: "jc.jpg",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "jc8",
+      name: "Sarala",
       dept: "cse",
-      img: "jc.jpg",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "kjc9",
+      name: "Sarulatha",
       dept: "cse",
-      img: "jc.jpg",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "ljc10",
+      name: "Thenmozhi",
       dept: "cse",
-      img: "jc.jpg",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "ejc5",
+      name: "Jayabarathy",
       dept: "cse",
-      img: "jc.jpg",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "kagujc6",
-      dept: "cse",
-      img: "jc.jpg",
+      name: "Vimala",
+      dept: "chemistry",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "tammuhjc7",
-      dept: "cse",
-      img: "jc.jpg",
+      name: "Nirmala",
+      dept: "Maths",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "sammujc8",
-      dept: "cse",
-      img: "jc.jpg",
+      name: "Ayyapan",
+      dept: "Maths",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "shikjc9",
-      dept: "cse",
-      img: "jc.jpg",
+      name: "Jeevanandham",
+      dept: "eee",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu'),
   Contact(
-      name: "kamljc10",
-      dept: "cse",
-      img: "jc.jpg",
+      name: "Namachivayam",
+      dept: "Physics",
+      img: "selvaraj.jpg",
       phone_no: "9442362922",
       email: 'selvaraj@pec.edu')
 ];

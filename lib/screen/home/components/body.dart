@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pec_yellow_pages/screen/Widget/search_box.dart';
 import 'package:pec_yellow_pages/screen/home/components/ItemList.dart';
 
@@ -51,8 +52,8 @@ class Drop1 extends StatefulWidget {
 }
 
 class _Drop1State extends State<Drop1> {
-  final List<String> dept = ["ACADEMICS", "ADMINISTRATION"];
-  String selecteddept = "ACADEMICS";
+  final List<String> dept = ["ALL", "ACADEMICS", "ADMINISTRATION"];
+  String selecteddept = "ALL";
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -69,7 +70,13 @@ class _Drop1State extends State<Drop1> {
             },
             items: dept.map<DropdownMenuItem<String>>((value) {
               return DropdownMenuItem(
-                child: Text(value),
+                child: Text(
+                  value,
+                  style: GoogleFonts.poppins(
+                    textStyle:
+                        TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                  ),
+                ),
                 value: value,
               );
             }).toList(),
@@ -102,7 +109,6 @@ class _Drop2State extends State<Drop2> {
   Widget build(BuildContext context) {
     return Container(
       width: 139,
-      //padding: EdgeInsets.all(20),
       child: Column(
         children: <Widget>[
           DropdownButton<String>(
@@ -114,7 +120,10 @@ class _Drop2State extends State<Drop2> {
               },
               items: dept.map<DropdownMenuItem<String>>((value) {
                 return DropdownMenuItem(
-                  child: Text(value),
+                  child: Text(value,
+                      style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.w400))),
                   value: value,
                 );
               }).toList())

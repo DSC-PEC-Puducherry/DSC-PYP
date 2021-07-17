@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pec_yellow_pages/screen/Contact_page/details_screen.dart';
 import 'package:pec_yellow_pages/screen/home/components/ItemList.dart';
 
@@ -47,6 +48,7 @@ class searchitem extends SearchDelegate<ItemList> {
   Widget buildLeading(BuildContext context) {
     return IconButton(
         onPressed: () {
+          //on click it moves back to main page
           close(context, ItemList());
         },
         icon: Icon(Icons.arrow_back));
@@ -57,23 +59,28 @@ class searchitem extends SearchDelegate<ItemList> {
     final mylist = Teacher;
 
     return ListView.builder(
-        itemCount: mylist.length,
-        itemBuilder: (context, index) {
-          final Contact listitem = mylist[index];
-          return ListTile(
-            title: Text(
-              listitem.name,
+      itemCount: mylist.length,
+      itemBuilder: (context, index) {
+        final Contact listitem = mylist[index];
+        return ListTile(
+          title: Text(
+            listitem.name,
+            style: GoogleFonts.poppins(
+              textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
             ),
-          );
-        });
+          ),
+        );
+      },
+    );
   }
 
   @override
   Widget buildSuggestions(BuildContext context) {
     final mylist = query.isEmpty
-        ? Teacher
+        ? Teacher // if search bar is empty it displays all contacts
         : Teacher.where(
-            (element) => element.name.toLowerCase().startsWith(query)).toList();
+                (element) => element.name.toLowerCase().startsWith(query))
+            .toList(); // when start typing it displays the selected contact
 
     return ListView.builder(
       itemCount: mylist.length,
@@ -81,6 +88,7 @@ class searchitem extends SearchDelegate<ItemList> {
         final Contact listitem = mylist[index];
         return ListTile(
           title: InkWell(
+            //on ing the contacts it navigates to new page
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
@@ -94,18 +102,41 @@ class searchitem extends SearchDelegate<ItemList> {
                 ),
               );
             },
-            child: Row(
+            child: Column(
               children: [
-                CircleAvatar(
-                  backgroundImage: AssetImage("images/" + Teacher[index].img),
-                  maxRadius: 25,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                Row(
                   children: [
-                    Text(listitem.name),
-                    Text(listitem.dept),
+                    CircleAvatar(
+                      backgroundImage:
+                          AssetImage("images/" + Teacher[index].img),
+                      maxRadius: 25,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          listitem.name,
+                          style: GoogleFonts.poppins(
+                            textStyle: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w400),
+                          ),
+                        ),
+                        Text(
+                          listitem.dept,
+                          style: GoogleFonts.poppins(
+                            textStyle: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w400),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
+                ),
+                Divider(
+                  thickness: 2,
                 ),
               ],
             ),

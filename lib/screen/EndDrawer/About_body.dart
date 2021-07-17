@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pec_yellow_pages/screen/EndDrawer/About_card.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -19,18 +20,22 @@ class Body1 extends StatelessWidget {
           ),
 
           //DSC TEXT 1
-          Text(
-            "Developer Student Clubs",
-            style: TextStyle(
-                fontSize: 18, fontWeight: FontWeight.bold, color: Colors.grey),
-          ),
+          Text("Developer Student Clubs",
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey),
+              )),
 
           //DSC TEXT 2
-          Text(
-            "Pondicherry Engineering College",
-            style: TextStyle(
-                fontSize: 21, fontWeight: FontWeight.bold, color: Colors.black),
-          ),
+          Text("Pondicherry Engineering College",
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+                    fontSize: 21,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              )),
 
           //DSC TXT GAP1
           SizedBox(height: 10),
@@ -208,13 +213,16 @@ class Body1 extends StatelessWidget {
           Container(
             padding: new EdgeInsets.all(20),
             child: new Text(
-              "Google Developer Student clubs are community groups for College and University students interested in Google developer" +
-                  " technologies.Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome." +
+              "Google Developer Student clubs are community groups for College and University students interested in Google developer technologies. " +
+                  "Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome." +
                   "By joining a DSC ,students grow their Knowledge in a peer-to-peer learning environment and build solutions for a local businesses and their community",
-              style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black),
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
+              //textAlign: TextAlign.center, //if needed add
             ),
           ),
         ],

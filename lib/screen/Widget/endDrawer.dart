@@ -1,10 +1,12 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pec_yellow_pages/screen/EndDrawer/About_main.dart';
 import 'package:pec_yellow_pages/screen/EndDrawer/add.dart';
 import 'package:pec_yellow_pages/screen/EndDrawer/edit.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pec_yellow_pages/screen/EndDrawer/feedback.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 
 class EndDrawer extends StatelessWidget {
   const EndDrawer({
@@ -24,47 +26,83 @@ class EndDrawer extends StatelessWidget {
             elevation: 16.0,
             child: Column(
               children: <Widget>[
+                //1
                 Padding(
-                  padding: EdgeInsets.only(top: 190),
-
-                  //1
-                  child: InkWell(
-                      child: ListTile(
-                    leading: Icon(
-                      Icons.edit,
-                      color: Colors.black,
+                  padding: EdgeInsets.only(top: 180),
+                  child: ListTile(
+                    title: Row(
+                      children: [
+                        Icon(
+                          FontAwesomeIcons.solidMoon,
+                        ),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        Text("DARK MODE",
+                            style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500),
+                            )),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        ToggleSwitch(
+                          totalSwitches: 2,
+                          minWidth: 20.0,
+                          cornerRadius: 20.0,
+                          minHeight: 20,
+                          initialLabelIndex: 0,
+                          activeBgColor: [Colors.black],
+                          onToggle: (index) {},
+                        ),
+                      ],
                     ),
-                    title: Text(
-                      "EDIT",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black,
-                      ),
-                    ),
-                    onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => Edit()),
-                      );
-                    },
-                  )),
+                  ),
                 ),
-
-                //2
                 Divider(
                   height: 1,
                 ),
-                ListTile(
+
+                //2
+                InkWell(
+                    child: ListTile(
                   leading: Icon(
-                    Icons.add_rounded,
+                    Icons.edit,
                     color: Colors.black,
                   ),
-                  title: Text(
-                    "CREATE",
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.black,
-                    ),
+                  title: Text("EDIT",
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                      )),
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => Edit()),
+                    );
+                  },
+                )),
+
+                Divider(
+                  height: 1,
+                ),
+
+                //3
+                ListTile(
+                  leading: Icon(
+                    FontAwesomeIcons.plusCircle,
+                    color: Colors.black,
                   ),
+                  title: Text("CREATE",
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500),
+                      )),
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => Add()),
@@ -72,22 +110,24 @@ class EndDrawer extends StatelessWidget {
                   },
                 ),
 
-                //3
                 Divider(
                   height: 3,
                 ),
+
+                //4
                 ListTile(
                   leading: Icon(
-                    Icons.feedback,
+                    FontAwesomeIcons.handsHelping,
                     color: Colors.black,
                   ),
-                  title: Text(
-                    "FEEDBACK",
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.black,
-                    ),
-                  ),
+                  title: Text("FEEDBACK",
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black,
+                        ),
+                      )),
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => FeedBack()),
@@ -95,11 +135,11 @@ class EndDrawer extends StatelessWidget {
                   },
                 ),
 
-                //4
                 Divider(
                   height: 3,
                 ),
 
+                //5
                 InkWell(
                   child: ListTile(
                     leading: Icon(
@@ -108,10 +148,12 @@ class EndDrawer extends StatelessWidget {
                     ),
                     title: Text(
                       "ABOUT US",
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black),
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black),
+                      ),
                     ),
                     onTap: () {
                       Navigator.of(context).push(
@@ -128,6 +170,7 @@ class EndDrawer extends StatelessWidget {
                 Icon(
                   Icons.more_horiz,
                   size: 50,
+                  color: Color.fromRGBO(0, 0, 0, 0.25),
                 )
               ],
             ),
