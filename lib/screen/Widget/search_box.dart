@@ -1,41 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:pec_yellow_pages/Colors.dart';
 import 'package:pec_yellow_pages/screen/Contact_page/details_screen.dart';
 import 'package:pec_yellow_pages/screen/home/components/ItemList.dart';
 
 class SearchBox extends StatelessWidget {
-  //final ValueChanged<String> onChanged;
-  // List<ItemList> name;
-
   SearchBox({
     Key? key,
-
-    //required this.onChanged,
-    // required this.name,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      /*margin: EdgeInsets.all(20),
-      padding: EdgeInsets.symmetric(horizontal: 25, vertical: 0),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(50),
-        border: Border.all(
-          color: ksecondaryColor.withOpacity(0.32),
-        ),
-      ),
-      child: TextField(
-        onTap: () {
-          showSearch(context: context, delegate: searchitem());
-        },
-        decoration: InputDecoration(
-          border: InputBorder.none,
-          icon: Icon(Icons.search),
-          hintText: "Search Contacts",
-          hintStyle: TextStyle(color: ksecondaryColor),
-        ),
-      ),*/
       child: Row(
         children: [
           Align(
@@ -96,15 +70,6 @@ class searchitem extends SearchDelegate<ItemList> {
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    //final mylist = Teacher();
-    /*return ListView.builder(
-        itemCount: Teacher.length,
-        itemBuilder: (context, index) {
-          final Contact listitem = Teacher[index];
-          return ListTile(
-            title: Text(listitem.name),
-          );
-        });*/
     final mylist = query.isEmpty
         ? Teacher
         : Teacher.where(
@@ -119,13 +84,14 @@ class searchitem extends SearchDelegate<ItemList> {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                    builder: (context) => DetailsScreen(
-                          text: Teacher[index].name,
-                          img: "images/" + Teacher[index].img,
-                          dept: Teacher[index].dept,
-                          phone: Teacher[index].phone_no,
-                          email: Teacher[index].email,
-                        )),
+                  builder: (context) => DetailsScreen(
+                    text: Teacher[index].name,
+                    img: "images/" + Teacher[index].img,
+                    dept: Teacher[index].dept,
+                    phone: Teacher[index].phone_no,
+                    email: Teacher[index].email,
+                  ),
+                ),
               );
             },
             child: Row(
@@ -149,3 +115,24 @@ class searchitem extends SearchDelegate<ItemList> {
     );
   }
 }
+
+//search bar design
+/*    margin: EdgeInsets.all(20),
+      padding: EdgeInsets.symmetric(horizontal: 25, vertical: 0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(50),
+        border: Border.all(
+          color: ksecondaryColor.withOpacity(0.32),
+        ),
+      ),
+      child: TextField(
+        onTap: () {
+          showSearch(context: context, delegate: searchitem());
+        },
+        decoration: InputDecoration(
+          border: InputBorder.none,
+          icon: Icon(Icons.search),
+          hintText: "Search Contacts",
+          hintStyle: TextStyle(color: ksecondaryColor),
+        ),
+      ),*/

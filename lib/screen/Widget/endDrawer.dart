@@ -1,10 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:pec_yellow_pages/screen/About_us/About_main.dart';
-import 'package:pec_yellow_pages/screen/Misc/add.dart';
-import 'package:pec_yellow_pages/screen/Misc/edit.dart';
-import 'package:pec_yellow_pages/screen/Misc/feedback.dart';
+import 'package:pec_yellow_pages/screen/EndDrawer/About_main.dart';
+import 'package:pec_yellow_pages/screen/EndDrawer/add.dart';
+import 'package:pec_yellow_pages/screen/EndDrawer/edit.dart';
+import 'package:pec_yellow_pages/screen/EndDrawer/feedback.dart';
 
 class EndDrawer extends StatelessWidget {
   const EndDrawer({
@@ -17,10 +17,9 @@ class EndDrawer extends StatelessWidget {
       filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
       child: Container(
         width: 250,
-        //height: 700,
         child: ClipRRect(
           borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(70), bottomLeft: Radius.circular(70)),
+              topLeft: Radius.circular(50), bottomLeft: Radius.circular(50)),
           child: Drawer(
             elevation: 16.0,
             child: Column(

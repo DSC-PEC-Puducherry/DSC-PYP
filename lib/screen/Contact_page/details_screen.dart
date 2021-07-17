@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
+import 'package:pec_yellow_pages/Colors.dart';
 import 'package:share/share.dart';
 import 'package:clipboard/clipboard.dart';
 
@@ -20,10 +21,9 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: kPrimaryColor,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color.fromRGBO(255, 244, 141, 1),
+        backgroundColor: detailpgAppbar,
       ),
       body: Container(
         child: Column(
@@ -175,7 +175,7 @@ class DetailsScreen extends StatelessWidget {
                       },
                       icon: Icon(
                         Icons.call,
-                        color: Color.fromRGBO(255, 237, 73, 1),
+                        color: detailIconcolor,
                       ),
                     ),
                   ),
@@ -191,7 +191,7 @@ class DetailsScreen extends StatelessWidget {
                       },
                       icon: Icon(
                         Icons.share,
-                        color: Color.fromRGBO(255, 237, 73, 1),
+                        color: detailIconcolor,
                       ),
                     ),
                   ),
@@ -214,7 +214,7 @@ class DetailsScreen extends StatelessWidget {
                       },
                       icon: Icon(
                         Icons.copy,
-                        color: Color.fromRGBO(255, 237, 73, 1),
+                        color: detailIconcolor,
                       ),
                     ),
                   ),

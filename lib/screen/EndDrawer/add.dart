@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pec_yellow_pages/Colors.dart';
 
 class Add extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class _State extends State<Add> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        backgroundColor: Color.fromRGBO(255, 244, 141, 1),
+        backgroundColor: sideApp,
       ),
       body: SingleChildScrollView(
         child: new Container(
@@ -161,7 +162,7 @@ class _State extends State<Add> {
                   )),
             ],
           ),
-          color: Color.fromRGBO(255, 244, 141, 1),
+          color: sideApp,
         ),
       ),
     );

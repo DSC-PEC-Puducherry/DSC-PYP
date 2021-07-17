@@ -1,23 +1,24 @@
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pec_yellow_pages/Colors.dart';
 
-class FeedBack extends StatefulWidget {
+class Edit extends StatefulWidget {
   @override
   _State createState() => new _State();
 }
 
-class _State extends State<FeedBack> {
+class _State extends State<Edit> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        // toolbarHeight: 30,
-        backgroundColor: Color.fromRGBO(255, 244, 141, 1),
+        backgroundColor: sideApp,
       ),
       body: SingleChildScrollView(
         child: new Container(
-          padding: new EdgeInsets.all(40.0),
+          padding: new EdgeInsets.all(35.0),
           child: new Center(
             child: new Column(
               children: <Widget>[
@@ -25,7 +26,7 @@ class _State extends State<FeedBack> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      "Feedback ",
+                      "Edit ",
                       style: GoogleFonts.oswald(
                         textStyle: TextStyle(
                           fontSize: 30,
@@ -35,7 +36,7 @@ class _State extends State<FeedBack> {
                       ),
                     ),
                     Text(
-                      " Form",
+                      "Contact",
                       style: GoogleFonts.oswald(
                         textStyle: TextStyle(
                           fontSize: 30,
@@ -71,11 +72,11 @@ class _State extends State<FeedBack> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Icon(Icons.phone),
+                      Icon(CupertinoIcons.building_2_fill),
                       SizedBox(height: 7),
                       TextField(
                           decoration: new InputDecoration(
-                              hintText: "Enter Phone Number",
+                              hintText: "Enter Department",
                               border: new OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(14),
                                 borderSide: BorderSide(),
@@ -90,21 +91,36 @@ class _State extends State<FeedBack> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Icon(Icons.feedback),
+                      Icon(Icons.phone),
                       SizedBox(height: 7),
                       TextField(
-                        decoration: new InputDecoration(
-                            hintText: "Your Valueable Feedback here ..",
-                            border: new OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(),
-                            ),
-                            fillColor: Color(0xfff3f3f4),
-                            filled: true),
-                        keyboardType: TextInputType.multiline,
-                        minLines: 3,
-                        maxLines: 5,
-                      )
+                          decoration: new InputDecoration(
+                              hintText: "Enter latest Phone Number",
+                              border: new OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(14),
+                                borderSide: BorderSide(),
+                              ),
+                              fillColor: Color(0xfff3f3f4),
+                              filled: true))
+                    ],
+                  ),
+                ),
+                new Container(
+                  margin: EdgeInsets.symmetric(vertical: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Icon(Icons.mail),
+                      SizedBox(height: 7),
+                      TextField(
+                          decoration: new InputDecoration(
+                              hintText: "Enter latest E-mail ID",
+                              border: new OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(14),
+                                borderSide: BorderSide(),
+                              ),
+                              fillColor: Color(0xfff3f3f4),
+                              filled: true))
                     ],
                   ),
                 ),
@@ -113,9 +129,9 @@ class _State extends State<FeedBack> {
                   height: 50,
                   width: 300,
                   child: ElevatedButton(
-                    onPressed: () {}, // mailto DSC@PEC.EDU
+                    onPressed: () {},
                     child: new Text(
-                      "SEND FEEDBACK",
+                      "UPDATE",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -134,18 +150,18 @@ class _State extends State<FeedBack> {
       ),
       bottomNavigationBar: new BottomAppBar(
         child: Container(
-          height: 50,
+          height: 25,
           child: Column(
             children: <Widget>[
-              new Text(""),
-              new Text("Feedbacks are sent to DSC-PEC Developers team.",
+              //new Text(""),
+              new Text("*NOTE: Subject to Verification.",
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                   )),
             ],
           ),
-          color: Color.fromRGBO(255, 244, 141, 1),
+          color: sideApp,
         ),
       ),
     );

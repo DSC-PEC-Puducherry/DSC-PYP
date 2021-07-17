@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:pec_yellow_pages/Colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AboutusCard extends StatelessWidget {
@@ -27,7 +28,7 @@ class AboutusCard extends StatelessWidget {
       margin: EdgeInsets.fromLTRB(9, 5, 5, 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30.0),
-        color: Color.fromRGBO(196, 196, 196, 1),
+        color: AboutCardcolor,
         boxShadow: [
           BoxShadow(
               offset: Offset(0, 4),
