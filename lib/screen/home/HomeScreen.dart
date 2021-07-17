@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: homeAppBar(context),
       body: Body(),
-      endDrawer: endDrawer(),
+      endDrawer: Padding(padding: EdgeInsets.only(top: 30), child: endDrawer()),
     );
   }
 }

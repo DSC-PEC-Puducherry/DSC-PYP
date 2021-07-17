@@ -17,7 +17,7 @@ class endDrawer extends StatelessWidget {
         //height: 700,
         child: ClipRRect(
           borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(70), bottomLeft: Radius.circular(70)),
+              topLeft: Radius.circular(70), bottomLeft: Radius.circular(60)),
           child: Drawer(
             elevation: 16.0,
             child: Column(
@@ -86,23 +86,25 @@ class endDrawer extends StatelessWidget {
                   height: 3,
                 ),
 
-                ListTile(
-                  leading: Icon(
-                    Icons.info,
-                    color: Colors.black,
+                InkWell(
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.info,
+                      color: Colors.black,
+                    ),
+                    title: Text(
+                      "ABOUT US",
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black),
+                    ),
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => HomePage()),
+                      );
+                    },
                   ),
-                  title: Text(
-                    "ABOUT US",
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black),
-                  ),
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => HomePage()),
-                    );
-                  },
                 ),
                 SizedBox(
                   height: 20,

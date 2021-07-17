@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 
 class ItemCard extends StatelessWidget {
   final String name, dept, img;
@@ -15,8 +15,72 @@ class ItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //EDIT2
-    return Container(
+    return Padding(
+      padding: EdgeInsets.only(top: 15, right: 8, left: 2),
+      child: Container(
+        child: InkWell(
+          onTap: press,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(15),
+            child: PhysicalModel(
+              color: Colors.white,
+              shadowColor: Colors.blue,
+              child: Card(
+                color: Color.fromRGBO(250, 243, 212, 1),
+                elevation: 5,
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Center(
+                        child: CircleAvatar(
+                          backgroundImage: AssetImage("images/" + img),
+                          maxRadius: 34,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 8.0,
+                      ),
+                      Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          name,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          dept,
+                          style: TextStyle(fontSize: 15, color: Colors.blue),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+*/
+//==============================================================================
+
+
+
+
+
+//EDIT2
+    /*return Container(
       margin: EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
       //EDIT3
       decoration: BoxDecoration(
@@ -71,6 +135,7 @@ class ItemCard extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
+    );*/
+
+
+    

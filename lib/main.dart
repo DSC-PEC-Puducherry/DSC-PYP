@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'PecYellowPages',
       theme: ThemeData(
-        primaryColor: kPrimaryColor,
+        // primaryColor: kPrimaryColor,
+        primaryColor: Colors.white,
         scaffoldBackgroundColor: Colors.white,
         textTheme: TextTheme(
           body1: TextStyle(color: ksecondaryColor),

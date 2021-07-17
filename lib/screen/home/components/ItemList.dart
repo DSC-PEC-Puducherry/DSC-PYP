@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:pec_yellow_pages/screen/Contact_page/details_screen.dart';
-import 'package:pec_yellow_pages/screen/home/components/ItemCard.dart';
+
+class Contact {
+  final String name, dept, img, phone_no, email;
+  Contact({
+    required this.name,
+    required this.dept,
+    required this.img,
+    required this.phone_no,
+    required this.email,
+  });
+}
 
 class ItemList extends StatelessWidget {
   const ItemList({
@@ -10,322 +21,213 @@ class ItemList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: GridView.count(
-        crossAxisCount: 3,
-        childAspectRatio: 0.69,
-        children: <Widget>[
-          ItemCard(
-            img: "selvaraj.jpg",
-            name: "Selvarajou Ka",
-            dept: "cse",
-            press: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: (context) => DetailsScreen(
-                          text: "Selvarajou Ka",
-                          img: "images/selvaraj.jpg",
-                          dept: "cse",
-                          phone: "9442362922",
-                          email: 'selvaraj@pec.edu',
-                        )),
-              );
-            },
-            phone_no: "9442362922",
-          ),
-          ItemCard(
-            img: "selvaraj.jpg",
-            name: "Selvarajou Ka",
-            dept: "cse",
-            press: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: (context) => DetailsScreen(
-                          text: "Selvarajou Ka",
-                          img: "images/selvaraj.jpg",
-                          dept: "cse",
-                          phone: "9442362922",
-                          email: 'selvaraj@pec.edu',
-                        )),
-              );
-            },
-            phone_no: "9442362922",
-          ),
-          ItemCard(
-            img: "selvaraj.jpg",
-            name: "Selvarajou Ka",
-            dept: "cse",
-            press: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: (context) => DetailsScreen(
-                          text: "Selvarajou Ka",
-                          img: "images/selvaraj.jpg",
-                          dept: "cse",
-                          phone: "9442362922",
-                          email: 'selvaraj@pec.edu',
-                        )),
-              );
-            },
-            phone_no: "9442362922",
-          ),
-          ItemCard(
-            img: "selvaraj.jpg",
-            name: "Selvarajou Ka",
-            dept: "cse",
-            press: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: (context) => DetailsScreen(
-                          text: "Selvarajou Ka",
-                          img: "images/selvaraj.jpg",
-                          dept: "cse",
-                          phone: "9442362922",
-                          email: 'selvaraj@pec.edu',
-                        )),
-              );
-            },
-            phone_no: "9442362922",
-          ),
-          ItemCard(
-            img: "selvaraj.jpg",
-            name: "Selvarajou Ka",
-            dept: "cse",
-            press: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: (context) => DetailsScreen(
-                          text: "Selvarajou Ka",
-                          img: "images/selvaraj.jpg",
-                          dept: "cse",
-                          phone: "9442362922",
-                          email: 'selvaraj@pec.edu',
-                        )),
-              );
-            },
-            phone_no: "9442362922",
-          ),
-          ItemCard(
-            img: "selvaraj.jpg",
-            name: "Selvarajou Ka",
-            dept: "cse",
-            press: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: (context) => DetailsScreen(
-                          text: "Selvarajou Ka",
-                          img: "images/selvaraj.jpg",
-                          dept: "cse",
-                          phone: "9442362922",
-                          email: 'selvaraj@pec.edu',
-                        )),
-              );
-            },
-            phone_no: "9442362922",
-          ),
-          ItemCard(
-            img: "selvaraj.jpg",
-            name: "Selvarajou Ka",
-            dept: "cse",
-            press: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: (context) => DetailsScreen(
-                          text: "Selvarajou Ka",
-                          img: "images/selvaraj.jpg",
-                          dept: "cse",
-                          phone: "9442362922",
-                          email: 'selvaraj@pec.edu',
-                        )),
-              );
-            },
-            phone_no: "9442362922",
-          ),
-          ItemCard(
-            img: "selvaraj.jpg",
-            name: "Selvarajou Ka",
-            dept: "cse",
-            press: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: (context) => DetailsScreen(
-                          text: "Selvarajou Ka",
-                          img: "images/selvaraj.jpg",
-                          dept: "cse",
-                          phone: "9442362922",
-                          email: 'selvaraj@pec.edu',
-                        )),
-              );
-            },
-            phone_no: "9442362922",
-          ),
-          ItemCard(
-            img: "selvaraj.jpg",
-            name: "Selvarajou Ka",
-            dept: "cse",
-            press: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: (context) => DetailsScreen(
-                          text: "Selvarajou Ka",
-                          img: "images/selvaraj.jpg",
-                          dept: "cse",
-                          phone: "9442362922",
-                          email: 'selvaraj@pec.edu',
-                        )),
-              );
-            },
-            phone_no: "9442362922",
-          ),
-          ItemCard(
-            img: "selvaraj.jpg",
-            name: "Selvarajou Ka",
-            dept: "cse",
-            press: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: (context) => DetailsScreen(
-                          text: "Selvarajou Ka",
-                          img: "images/selvaraj.jpg",
-                          dept: "cse",
-                          phone: "9442362922",
-                          email: 'selvaraj@pec.edu',
-                        )),
-              );
-            },
-            phone_no: "9442362922",
-          ),
-          ItemCard(
-            img: "selvaraj.jpg",
-            name: "Selvarajou Ka",
-            dept: "cse",
-            press: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: (context) => DetailsScreen(
-                          text: "Selvarajou Ka",
-                          img: "images/selvaraj.jpg",
-                          dept: "cse",
-                          phone: "9442362922",
-                          email: 'selvaraj@pec.edu',
-                        )),
-              );
-            },
-            phone_no: "9442362922",
-          ),
-          ItemCard(
-            img: "selvaraj.jpg",
-            name: "Selvarajou Ka",
-            dept: "cse",
-            press: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: (context) => DetailsScreen(
-                          text: "Selvarajou Ka",
-                          img: "images/selvaraj.jpg",
-                          dept: "cse",
-                          phone: "9442362922",
-                          email: 'selvaraj@pec.edu',
-                        )),
-              );
-            },
-            phone_no: "9442362922",
-          ),
-        ],
+      child: ListView.builder(
+        itemCount: 11,
+        itemBuilder: (context, index) {
+          return Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 10, top: 10, bottom: 10),
+                child: Align(
+                    alignment: Alignment.topLeft,
+                    child: CircleAvatar(
+                      child: Text(Teacher[index].name[0]),
+                    )),
+              ),
+              GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 5.0,
+                    mainAxisSpacing: 5.0,
+                    childAspectRatio: 0.69),
+                itemCount: Teacher.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: EdgeInsets.only(top: 15, right: 8, left: 2),
+                    child: Visibility(
+                      child: Container(
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                  builder: (context) => DetailsScreen(
+                                        text: Teacher[index].name,
+                                        img: "images/" + Teacher[index].img,
+                                        dept: Teacher[index].dept,
+                                        phone: Teacher[index].phone_no,
+                                        email: Teacher[index].email,
+                                      )),
+                            );
+                          },
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: PhysicalModel(
+                              color: Colors.white,
+                              shadowColor: Colors.blue,
+                              child: Card(
+                                color: Color.fromRGBO(250, 243, 212, 1),
+                                elevation: 5,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Center(
+                                        child: CircleAvatar(
+                                          backgroundImage: AssetImage(
+                                              "images/" + Teacher[index].img),
+                                          maxRadius: 34,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 8.0,
+                                      ),
+                                      Align(
+                                        alignment: Alignment.center,
+                                        child: Text(
+                                          Teacher[index].name,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black),
+                                        ),
+                                      ),
+                                      Align(
+                                        alignment: Alignment.center,
+                                        child: Text(
+                                          Teacher[index].dept,
+                                          style: TextStyle(
+                                              fontSize: 15, color: Colors.blue),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+              SizedBox(
+                height: 10,
+              )
+            ],
+          );
+        },
       ),
     );
   }
 }
 
-
-
-//DIALOG BOX VIEW CODE
-/*
-showDialog(
-                context: context,
-                builder: (context) {
-                  //background image blur --------------------------------------
-
-                  return BackdropFilter(
-                    filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
-
-                    //----------------------------------------------------------
-
-                    //dialog box -----------------------------------------------
-
-                    child: Dialog(
-                      backgroundColor: Colors.yellow,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(20),
-                        ),
-                      ),
-                      child: Stack(
-                        //OVERFLOW THE DIALOG BOX ------------------------------
-                        alignment: Alignment.topCenter,
-                        overflow: Overflow.visible,
-                        //------------------------------------------------------
-
-                        children: <Widget>[
-                          Container(
-                            height: 400,
-                            child: Padding(
-                              padding: const EdgeInsets.all(20.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-
-                                //content --------------------------------------
-
-                                children: <Widget>[
-                                  SizedBox(
-                                    height: 50,
-                                  ),
-                                  new Text(
-                                    "AGILAN",
-                                    style: TextStyle(
-                                        fontFamily: "Segoe UI",
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: 25,
-                                        color: Color(0xff070707)),
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  new Text(
-                                    "A good handsome guy, Everyone loves him especially girls\n" +
-                                        "\nPersonal details:\n\n    Name: AGILAN,\n    phone no:9442622922",
-                                    style: TextStyle(
-                                        fontFamily: "Segoe UI",
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: 18,
-                                        color: Color(0xff070707)),
-                                  )
-                                ],
-
-                                //----------------------------------------------
-                              ),
-                            ),
-                          ),
-
-                          //IMAGE CIRCLE CENTER --------------------------------
-
-                          Positioned(
-                            top: -50,
-                            left: .0,
-                            right: .0,
-                            child: CircleAvatar(
-                              radius: 50.0,
-                              child: ClipRRect(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(50)),
-                                child: Image.asset("images/jc.jpg"),
-                              ),
-                            ),
-                          ),
-
-                          //----------------------------------------------------
-                        ],
-                      ),
-                    ),
-                  );
-                },
-              );*/
+List<Contact> Teacher = [
+  Contact(
+      name: "Selvarajou ka",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "bjc1",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "cjc2",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "djc3",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "djc4",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "ejc5",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "gjc6",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "hjc7",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "jc8",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "kjc9",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "ljc10",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "ejc5",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "kagujc6",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "tammuhjc7",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "sammujc8",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "shikjc9",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu'),
+  Contact(
+      name: "kamljc10",
+      dept: "cse",
+      img: "jc.jpg",
+      phone_no: "9442362922",
+      email: 'selvaraj@pec.edu')
+];

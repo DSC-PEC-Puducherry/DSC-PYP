@@ -1,13 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:pec_yellow_pages/Colors.dart';
-import 'package:pec_yellow_pages/screen/About_us/About_main.dart';
-import 'package:pec_yellow_pages/screen/Widget/endDrawer.dart';
+import 'package:pec_yellow_pages/screen/Widget/clippbar.dart';
 
 AppBar homeAppBar(BuildContext context) {
   return AppBar(
-    backgroundColor: Color.fromRGBO(255, 244, 141, 1),
-    toolbarHeight: 80,
+    // backgroundColor: Color.fromRGBO(255, 244, 141, 1),
+    toolbarHeight: 104,
+    iconTheme: IconThemeData(color: Color.fromRGBO(189, 147, 83, 0.89)),
     elevation: 0,
+
+    //custom clipbar -----------------------------------------------------------
+    flexibleSpace: ClipPath(
+      clipper: Customclippbar(),
+      child: Container(
+        /*decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color.fromRGBO(255, 244, 141, 1),
+              Color.fromRGBO(255, 244, 141, 1)
+            ],
+            begin: Alignment.bottomRight,
+            end: Alignment.topLeft,
+            //tileMode: TileMode.clamp,
+          ),
+        ),*/
+        color: Color.fromRGBO(255, 244, 141, 1),
+      ),
+    ),
+    //--------------------------------------------------------------------------
     title: Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
@@ -24,16 +43,14 @@ AppBar homeAppBar(BuildContext context) {
             ],
           ),
         ),*/
-        Align(
-            alignment: Alignment(-80, 0),
-            child: Image.asset("images/pypb.png", height: 150, width: 150)),
-        Padding(
-          padding: EdgeInsets.only(left: 82),
-          child: IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.share,
-            ),
+
+        Image.asset("images/pypb.png", height: 150, width: 70),
+        IconButton(
+          alignment: Alignment(48, 0),
+          onPressed: () {},
+          icon: Icon(
+            Icons.share,
+            color: Color.fromRGBO(189, 147, 83, 0.89),
           ),
         ),
       ],
