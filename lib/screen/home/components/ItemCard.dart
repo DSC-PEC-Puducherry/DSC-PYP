@@ -85,10 +85,10 @@ class ItemCard extends StatelessWidget {
       //EDIT3
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30.0),
-        color: Colors.white,
+        color: Colors.grey.shade300,
         boxShadow: [
           BoxShadow(
-              offset: Offset(0, 4),
+              offset: Offset(0, 7),
               blurRadius: 20,
               color: Color(0xFFB0CCE1).withOpacity(0.32))
         ],

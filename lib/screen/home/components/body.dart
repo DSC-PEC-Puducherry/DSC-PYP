@@ -14,10 +14,7 @@ class Body extends StatelessWidget {
     return Column(
       children: <Widget>[
         // SEARCH BOX ----------------------------------------------------------
-        SearchBox(
-            //name: [],
-            // onChanged: (value) {},
-            ),
+        SearchBox(),
 
         // DROP DOWN BOX--------------------------------------------------------
         Padding(
@@ -27,12 +24,12 @@ class Body extends StatelessWidget {
             child: IntrinsicHeight(
               child: Row(
                 children: [
-                  drop1(),
+                  Drop1(),
                   VerticalDivider(
                     width: 30,
                     color: Colors.blue,
                   ),
-                  drop2()
+                  Drop2()
                 ],
               ),
             ),
@@ -47,16 +44,15 @@ class Body extends StatelessWidget {
 }
 
 //------------------------------------------------------------------------------
-class drop1 extends StatefulWidget {
-  const drop1({Key? key}) : super(key: key);
-
+class Drop1 extends StatefulWidget {
+  const Drop1({Key? key}) : super(key: key);
   @override
-  _drop1State createState() => _drop1State();
+  _Drop1State createState() => _Drop1State();
 }
 
-class _drop1State extends State<drop1> {
-  final List<String> dept = ["ACDEMICS", "ADMINISTRATION"];
-  String selecteddept = "ACDEMICS";
+class _Drop1State extends State<Drop1> {
+  final List<String> dept = ["ACADEMICS", "ADMINISTRATION"];
+  String selecteddept = "ACADEMICS";
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -84,14 +80,13 @@ class _drop1State extends State<drop1> {
   }
 }
 
-class drop2 extends StatefulWidget {
-  const drop2({Key? key}) : super(key: key);
-
+class Drop2 extends StatefulWidget {
+  const Drop2({Key? key}) : super(key: key);
   @override
-  _drop2State createState() => _drop2State();
+  _Drop2State createState() => _Drop2State();
 }
 
-class _drop2State extends State<drop2> {
+class _Drop2State extends State<Drop2> {
   final List<String> dept = [
     "CSE",
     "ECE",
@@ -99,6 +94,7 @@ class _drop2State extends State<drop2> {
     "IT",
     "CHEMICAL",
     "MECHANICAL",
+    "CIVIL",
     "EIE"
   ];
   String selecteddept = "CSE";

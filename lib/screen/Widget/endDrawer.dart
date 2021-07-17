@@ -2,9 +2,12 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:pec_yellow_pages/screen/About_us/About_main.dart';
+import 'package:pec_yellow_pages/screen/Misc/add.dart';
+import 'package:pec_yellow_pages/screen/Misc/edit.dart';
+import 'package:pec_yellow_pages/screen/Misc/feedback.dart';
 
-class endDrawer extends StatelessWidget {
-  const endDrawer({
+class EndDrawer extends StatelessWidget {
+  const EndDrawer({
     Key? key,
   }) : super(key: key);
 
@@ -17,7 +20,7 @@ class endDrawer extends StatelessWidget {
         //height: 700,
         child: ClipRRect(
           borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(70), bottomLeft: Radius.circular(60)),
+              topLeft: Radius.circular(70), bottomLeft: Radius.circular(70)),
           child: Drawer(
             elevation: 16.0,
             child: Column(
@@ -39,7 +42,11 @@ class endDrawer extends StatelessWidget {
                         color: Colors.black,
                       ),
                     ),
-                    onTap: null,
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => Edit()),
+                      );
+                    },
                   )),
                 ),
 
@@ -59,7 +66,11 @@ class endDrawer extends StatelessWidget {
                       color: Colors.black,
                     ),
                   ),
-                  onTap: null,
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => Add()),
+                    );
+                  },
                 ),
 
                 //3
@@ -78,7 +89,11 @@ class endDrawer extends StatelessWidget {
                       color: Colors.black,
                     ),
                   ),
-                  onTap: null,
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => FeedBack()),
+                    );
+                  },
                 ),
 
                 //4
