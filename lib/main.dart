@@ -1,7 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pec_yellow_pages/Colors.dart';
-import 'package:pec_yellow_pages/screen/home/HomeScreen.dart';
+import 'package:pec_yellow_pages/SplashScreen.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
           bodyText1: TextStyle(color: ksecondaryColor),
         ),
       ),
-      home: HomeScreen(),
+      home: splashScreen(), //HomeScreen(),
     );
   }
 }
