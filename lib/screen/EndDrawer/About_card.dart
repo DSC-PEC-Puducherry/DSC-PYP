@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pec_yellow_pages/Colors.dart';
+
+import 'package:pec_yellow_pages/screen/providers/theme_data.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AboutusCard extends StatelessWidget {
@@ -59,7 +60,10 @@ class AboutusCard extends StatelessWidget {
                 children: <Widget>[
                   if (mailLink != 'null')
                     IconButton(
-                      icon: Icon(FontAwesomeIcons.envelope),
+                      icon: Icon(
+                        FontAwesomeIcons.envelope,
+                        color: Colors.black,
+                      ),
                       iconSize: 18,
                       onPressed: () {
                         launch("mailto:$mailLink");
@@ -67,7 +71,8 @@ class AboutusCard extends StatelessWidget {
                     ),
                   if (instaLink != 'null')
                     IconButton(
-                      icon: Icon(FontAwesomeIcons.instagram),
+                      icon:
+                          Icon(FontAwesomeIcons.instagram, color: Colors.black),
                       iconSize: 20,
                       onPressed: () {
                         launch(instaLink);
@@ -75,7 +80,8 @@ class AboutusCard extends StatelessWidget {
                     ),
                   if (linkedInLink != 'null')
                     IconButton(
-                      icon: Icon(FontAwesomeIcons.linkedin),
+                      icon:
+                          Icon(FontAwesomeIcons.linkedin, color: Colors.black),
                       iconSize: 20,
                       onPressed: () {
                         launch(linkedInLink);
@@ -83,7 +89,8 @@ class AboutusCard extends StatelessWidget {
                     ),
                   if (fbLink != 'null')
                     IconButton(
-                      icon: Icon(FontAwesomeIcons.facebook),
+                      icon:
+                          Icon(FontAwesomeIcons.facebook, color: Colors.black),
                       iconSize: 20,
                       onPressed: () {
                         launch(fbLink);
@@ -91,7 +98,7 @@ class AboutusCard extends StatelessWidget {
                     ),
                   if (gitLink != 'null')
                     IconButton(
-                      icon: Icon(FontAwesomeIcons.github),
+                      icon: Icon(FontAwesomeIcons.github, color: Colors.black),
                       iconSize: 20,
                       onPressed: () {
                         launch(gitLink);

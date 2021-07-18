@@ -42,17 +42,17 @@ class _splashScreenState extends State<splashScreen> {
             "PEC YELLOW PAGES",
             style: GoogleFonts.poppins(
                 textStyle: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.black)),
+              fontSize: 15,
+              fontWeight: FontWeight.w400,
+            )),
           ),
           Text(
             "An outcome of Google DSC-PEC",
             style: GoogleFonts.poppins(
                 textStyle: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.black)),
+              fontSize: 15,
+              fontWeight: FontWeight.w400,
+            )),
           ),
           SizedBox(
             height: 25,
@@ -67,9 +67,9 @@ class _splashScreenState extends State<splashScreen> {
             "Please wait",
             style: GoogleFonts.poppins(
                 textStyle: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.black)),
+              fontSize: 15,
+              fontWeight: FontWeight.w400,
+            )),
           ),
         ],
       ),

@@ -35,6 +35,8 @@ class ItemList extends StatelessWidget {
 
                   //Alphabet index inside circleAvatar
                   child: CircleAvatar(
+                    backgroundColor: Color.fromRGBO(254, 250, 228, 1),
+                    foregroundColor: Colors.black,
                     child: Text(Teacher[index].name[0],
                         style: GoogleFonts.poppins(
                             textStyle: TextStyle(

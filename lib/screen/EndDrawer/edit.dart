@@ -2,7 +2,8 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pec_yellow_pages/Colors.dart';
+
+import 'package:pec_yellow_pages/screen/providers/theme_data.dart';
 
 class Edit extends StatefulWidget {
   @override
@@ -14,8 +15,12 @@ class _State extends State<Edit> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        backgroundColor: sideApp,
-      ),
+          backgroundColor: sideApp,
+          centerTitle: true,
+          title: Text('EDIT CONTACT',
+              style: GoogleFonts.poppins(
+                  textStyle: TextStyle(
+                      fontWeight: FontWeight.w400, color: Colors.black)))),
       body: SingleChildScrollView(
         child: new Container(
           padding: new EdgeInsets.all(35.0),
@@ -31,7 +36,6 @@ class _State extends State<Edit> {
                         textStyle: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
                         ),
                       ),
                     ),

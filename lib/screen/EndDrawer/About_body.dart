@@ -14,7 +14,7 @@ class Body1 extends StatelessWidget {
         children: <Widget>[
           //DSC IMAGE
           Image.asset(
-            'images/dsc.jpg',
+            'images/DSC.png',
             width: 100,
             height: 70,
           ),
@@ -32,9 +32,9 @@ class Body1 extends StatelessWidget {
           Text("Pondicherry Engineering College",
               style: GoogleFonts.poppins(
                 textStyle: TextStyle(
-                    fontSize: 21,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
+                  fontSize: 21,
+                  fontWeight: FontWeight.bold,
+                ),
               )),
 
           //DSC TXT GAP1
@@ -218,9 +218,9 @@ class Body1 extends StatelessWidget {
                   "By joining a DSC ,students grow their Knowledge in a peer-to-peer learning environment and build solutions for a local businesses and their community",
               style: GoogleFonts.poppins(
                 textStyle: TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
+                  fontSize: 13,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               //textAlign: TextAlign.center, //if needed add
             ),

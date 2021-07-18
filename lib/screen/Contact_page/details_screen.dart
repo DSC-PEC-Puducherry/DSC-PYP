@@ -3,7 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pec_yellow_pages/Colors.dart';
+
+import 'package:pec_yellow_pages/screen/providers/theme_data.dart';
 import 'package:share/share.dart';
 import 'package:clipboard/clipboard.dart';
 
@@ -48,9 +49,7 @@ class DetailsScreen extends StatelessWidget {
                           text: " Details",
                           style: GoogleFonts.poppins(
                               textStyle: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.w700)))
+                                  fontSize: 30, fontWeight: FontWeight.w700)))
                     ],
                   ),
                 ),
@@ -98,7 +97,6 @@ class DetailsScreen extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       textStyle: TextStyle(
                         fontSize: 18,
-                        color: Colors.black,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -123,7 +121,6 @@ class DetailsScreen extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       textStyle: TextStyle(
                         fontSize: 18,
-                        color: Colors.black,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -148,9 +145,7 @@ class DetailsScreen extends StatelessWidget {
                 Text(phone,
                     style: GoogleFonts.poppins(
                         textStyle: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w600)))
+                            fontSize: 18, fontWeight: FontWeight.w600)))
               ]),
             ),
 
@@ -171,10 +166,8 @@ class DetailsScreen extends StatelessWidget {
                   Text(
                     email,
                     style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                          fontSize: 18,
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600),
+                      textStyle:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                     ),
                   ),
                 ],

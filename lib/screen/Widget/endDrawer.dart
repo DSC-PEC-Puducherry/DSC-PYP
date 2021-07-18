@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pec_yellow_pages/screen/EndDrawer/About_main.dart';
@@ -6,15 +7,22 @@ import 'package:pec_yellow_pages/screen/EndDrawer/add.dart';
 import 'package:pec_yellow_pages/screen/EndDrawer/edit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pec_yellow_pages/screen/EndDrawer/feedback.dart';
-import 'package:toggle_switch/toggle_switch.dart';
+import 'package:pec_yellow_pages/screen/providers/dark_theme.dart';
+import 'package:provider/provider.dart';
 
-class EndDrawer extends StatelessWidget {
+class EndDrawer extends StatefulWidget {
   const EndDrawer({
     Key? key,
   }) : super(key: key);
 
   @override
+  _EndDrawerState createState() => _EndDrawerState();
+}
+
+class _EndDrawerState extends State<EndDrawer> {
+  @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<DarkThemeProvider>(context);
     return BackdropFilter(
       filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
       child: Container(
@@ -29,38 +37,23 @@ class EndDrawer extends StatelessWidget {
                 //1
                 Padding(
                   padding: EdgeInsets.only(top: 180),
-                  child: ListTile(
-                    title: Row(
-                      children: [
-                        Icon(
-                          FontAwesomeIcons.solidMoon,
-                        ),
-                        SizedBox(
-                          width: 30,
-                        ),
-                        Text("DARK MODE",
-                            style: GoogleFonts.poppins(
-                              textStyle: TextStyle(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w500),
-                            )),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        ToggleSwitch(
-                          totalSwitches: 2,
-                          minWidth: 20.0,
-                          cornerRadius: 20.0,
-                          minHeight: 20,
-                          initialLabelIndex: 0,
-                          activeBgColor: [Colors.black],
-                          onToggle: (index) {},
-                        ),
-                      ],
-                    ),
-                  ),
                 ),
+
+                ListTile(
+                    leading: Icon(Icons.dark_mode),
+                    title: Text("DARK MODE",
+                        style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                              fontSize: 16.5, fontWeight: FontWeight.w500),
+                        )),
+                    trailing: CupertinoSwitch(
+                        activeColor: Colors.grey,
+                        value: themeProvider.darkTheme,
+                        onChanged: (onChanged) {
+                          setState(() {
+                            themeProvider.darkTheme = onChanged;
+                          });
+                        })),
                 Divider(
                   height: 1,
                 ),
@@ -70,14 +63,11 @@ class EndDrawer extends StatelessWidget {
                     child: ListTile(
                   leading: Icon(
                     Icons.edit,
-                    color: Colors.black,
                   ),
                   title: Text("EDIT",
                       style: GoogleFonts.poppins(
                         textStyle: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500),
+                            fontSize: 18, fontWeight: FontWeight.w500),
                       )),
                   onTap: () {
                     Navigator.of(context).push(
@@ -94,14 +84,11 @@ class EndDrawer extends StatelessWidget {
                 ListTile(
                   leading: Icon(
                     FontAwesomeIcons.plusCircle,
-                    color: Colors.black,
                   ),
                   title: Text("CREATE",
                       style: GoogleFonts.poppins(
                         textStyle: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500),
+                            fontSize: 18, fontWeight: FontWeight.w500),
                       )),
                   onTap: () {
                     Navigator.of(context).push(
@@ -118,14 +105,12 @@ class EndDrawer extends StatelessWidget {
                 ListTile(
                   leading: Icon(
                     FontAwesomeIcons.handsHelping,
-                    color: Colors.black,
                   ),
                   title: Text("FEEDBACK",
                       style: GoogleFonts.poppins(
                         textStyle: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w500,
-                          color: Colors.black,
                         ),
                       )),
                   onTap: () {
@@ -144,15 +129,15 @@ class EndDrawer extends StatelessWidget {
                   child: ListTile(
                     leading: Icon(
                       Icons.info,
-                      color: Colors.black,
                     ),
                     title: Text(
                       "ABOUT US",
                       style: GoogleFonts.poppins(
                         textStyle: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black),
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          //color: Colors.black
+                        ),
                       ),
                     ),
                     onTap: () {
@@ -170,7 +155,6 @@ class EndDrawer extends StatelessWidget {
                 Icon(
                   Icons.more_horiz,
                   size: 50,
-                  color: Color.fromRGBO(0, 0, 0, 0.25),
                 )
               ],
             ),
