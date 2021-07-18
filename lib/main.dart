@@ -1,7 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pec_yellow_pages/Colors.dart';
-import 'package:pec_yellow_pages/screen/home/HomeScreen.dart';
+import 'package:pec_yellow_pages/SplashScreen.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,6 +37,7 @@ class MyApp extends StatelessWidget {
           bodyText2: TextStyle(color: ksecondaryColor),
           bodyText1: TextStyle(color: ksecondaryColor),
         ),
+<<<<<<< HEAD
       ),*/
 
       theme: ThemeData(primarySwatch: Colors.amber),
@@ -42,6 +45,10 @@ class MyApp extends StatelessWidget {
       themeMode: currentMode,
 
       home: HomeScreen(),
+=======
+      ),
+      home: splashScreen(), //HomeScreen(),
+>>>>>>> 6445d25ec07c005755f4684329262817985258cd
     );
   }
         );
