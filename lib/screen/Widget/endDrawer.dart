@@ -8,6 +8,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pec_yellow_pages/screen/EndDrawer/feedback.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
+import '../../main.dart';
+
 class EndDrawer extends StatelessWidget {
   const EndDrawer({
     Key? key,
@@ -55,7 +57,13 @@ class EndDrawer extends StatelessWidget {
                           minHeight: 20,
                           initialLabelIndex: 0,
                           activeBgColor: [Colors.black],
-                          onToggle: (index) {},
+                          onToggle: (index) {
+                                            MyApp.themeNotifier.value =
+                               MyApp.themeNotifier.value == ThemeMode.light
+                        ? ThemeMode.dark
+                        : ThemeMode.light;
+
+                          },
                         ),
                       ],
                     ),
