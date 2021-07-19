@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pec_yellow_pages/SplashScreen.dart';
-import 'package:pec_yellow_pages/screen/providers/dark_theme.dart';
-import 'package:pec_yellow_pages/screen/providers/theme_data.dart';
+import 'package:pec_yellow_pages/screen/Splash_screen/SplashScreen.dart';
+import 'package:pec_yellow_pages/Dark_Theme_Providers/dark_theme.dart';
+import 'package:pec_yellow_pages/Dark_Theme_Providers/theme_data.dart';
 import 'package:provider/provider.dart';
 
 Future main() async {
