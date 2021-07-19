@@ -29,12 +29,16 @@ class _splashScreenState extends State<splashScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          //image.asset("images/pypb.png")
-          Lottie.asset(
+          Image.asset(
+            "images/pypb.png",
+            width: 100,
+            height: 100,
+          ),
+          /*Lottie.asset(
             "images/spl.json",
             width: 150,
             height: 150,
-          ),
+          ),*/
           SizedBox(
             height: 15,
           ),

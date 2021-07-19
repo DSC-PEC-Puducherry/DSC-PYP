@@ -32,27 +32,31 @@ class DetailsScreen extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.only(top: 50),
-              child: Align(
-                alignment: Alignment.topCenter,
-                child: RichText(
-                  text: TextSpan(
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                    children: [
-                      TextSpan(
-                          text: "Contact ",
-                          style: GoogleFonts.poppins(
-                              textStyle: TextStyle(
-                                  color: Colors.yellow,
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.w700))),
-                      TextSpan(
-                          text: " Details",
-                          style: GoogleFonts.poppins(
-                              textStyle: TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.w700)))
-                    ],
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Contact",
+                    style: GoogleFonts.poppins(
+                      textStyle: TextStyle(
+                          color: Colors.yellow,
+                          fontSize: 30,
+                          fontWeight: FontWeight.w700),
+                    ),
                   ),
-                ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "Details",
+                    style: GoogleFonts.poppins(
+                      textStyle: TextStyle(
+                          //color: Colors.yellow,
+                          fontSize: 30,
+                          fontWeight: FontWeight.w700),
+                    ),
+                  ),
+                ],
               ),
             ),
 

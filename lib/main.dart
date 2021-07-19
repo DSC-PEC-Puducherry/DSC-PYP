@@ -22,6 +22,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   DarkThemeProvider themeProvider = DarkThemeProvider();
+  //saves the mode of color
   void getCurrentAppTheme() async {
     themeProvider.darkTheme = await themeProvider.darkThemeSaver.getTheme();
   }

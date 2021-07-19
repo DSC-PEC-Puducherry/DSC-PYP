@@ -58,7 +58,7 @@ class searchitem extends SearchDelegate<ItemList> {
   Widget buildResults(BuildContext context) {
     final mylist = Teacher;
 
-    return ListView.builder(
+    return /*ListView.builder(
       itemCount: mylist.length,
       itemBuilder: (context, index) {
         final Contact listitem = mylist[index];
@@ -67,6 +67,68 @@ class searchitem extends SearchDelegate<ItemList> {
             listitem.name,
             style: GoogleFonts.poppins(
               textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+            ),
+          ),
+        );
+      },
+    );*/
+        ListView.builder(
+      itemCount: mylist.length,
+      itemBuilder: (context, index) {
+        final Contact listitem = mylist[index];
+        return ListTile(
+          title: InkWell(
+            //on ing the contacts it navigates to new page
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(
+                    text: Teacher[index].name,
+                    img: "images/" + Teacher[index].img,
+                    dept: Teacher[index].dept,
+                    phone: Teacher[index].phone_no,
+                    email: Teacher[index].email,
+                  ),
+                ),
+              );
+            },
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    CircleAvatar(
+                      backgroundImage:
+                          AssetImage("images/" + Teacher[index].img),
+                      maxRadius: 25,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          listitem.name,
+                          style: GoogleFonts.poppins(
+                            textStyle: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w400),
+                          ),
+                        ),
+                        Text(
+                          listitem.dept,
+                          style: GoogleFonts.poppins(
+                            textStyle: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w400),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Divider(
+                  thickness: 2,
+                ),
+              ],
             ),
           ),
         );
