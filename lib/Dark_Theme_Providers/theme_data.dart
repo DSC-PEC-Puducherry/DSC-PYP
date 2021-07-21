@@ -10,7 +10,7 @@ const AboutCardcolor = Color.fromRGBO(196, 196, 196, 1);
 
 //details
 const detailpgAppbar = Color.fromRGBO(255, 244, 141, 1);
-const detailIconcolor = Color.fromRGBO(255, 237, 73, 1);
+const detailIconcolor = Color.fromRGBO(255, 215, 1, 1);
 
 //appbar
 const appbarIconColor = Color.fromRGBO(189, 147, 83, 0.89);

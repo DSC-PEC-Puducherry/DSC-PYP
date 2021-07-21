@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:pec_yellow_pages/Dark_Theme_Providers/theme_data.dart';
 import 'package:share/share.dart';
 import 'package:clipboard/clipboard.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DetailsScreen extends StatelessWidget {
   final String text, dept, img, email;
@@ -30,7 +31,7 @@ class DetailsScreen extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 50),
+              padding: EdgeInsets.only(top: 30),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -60,7 +61,7 @@ class DetailsScreen extends StatelessWidget {
             ),
 
             //
-            SizedBox(height: 30),
+            SizedBox(height: 20),
             Card(
               color: Colors.grey,
               shape: RoundedRectangleBorder(
@@ -72,7 +73,7 @@ class DetailsScreen extends StatelessWidget {
                     border: Border.all(width: 5, color: Colors.grey),
                   ),
                   height: 170.0,
-                  width: 180.0,
+                  width: 160.0,
                   child: Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
@@ -85,7 +86,51 @@ class DetailsScreen extends StatelessWidget {
               ),
             ),
 
-            //
+            //social media profiles
+            Padding(
+              padding: EdgeInsets.only(top: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircleAvatar(
+                    backgroundColor: Color.fromRGBO(245, 245, 245, 1),
+                    child: IconButton(
+                        onPressed: () {
+                          launch("whatsapp://send?phone=+91 $phone&text=$text");
+                        },
+                        icon: Icon(
+                          FontAwesomeIcons.whatsapp,
+                          color: Color.fromRGBO(255, 215, 1, 1),
+                        )),
+                  ),
+                  SizedBox(width: 20),
+                  CircleAvatar(
+                    backgroundColor: Color.fromRGBO(245, 245, 245, 1),
+                    child: IconButton(
+                        onPressed: () {
+                          launch("mailto:$email");
+                        },
+                        icon: Icon(
+                          FontAwesomeIcons.envelope,
+                          color: Color.fromRGBO(255, 215, 1, 1),
+                        )),
+                  ),
+                  SizedBox(width: 20),
+                  CircleAvatar(
+                    backgroundColor: Color.fromRGBO(245, 245, 245, 1),
+                    child: IconButton(
+                        onPressed: () {
+                          launch(
+                              'https://www.linkedin.com/in/selvaradjou-kandasamy-6a083748/');
+                        },
+                        icon: Icon(FontAwesomeIcons.linkedin,
+                            color: Color.fromRGBO(255, 215, 1, 1))),
+                  ),
+                ],
+              ),
+            ),
+
+            //personal details
             SizedBox(height: 30),
             Padding(
               padding: EdgeInsets.only(left: 80),
@@ -93,7 +138,8 @@ class DetailsScreen extends StatelessWidget {
                 children: [
                   CircleAvatar(
                       backgroundColor: Color.fromRGBO(245, 245, 245, 1),
-                      child: Icon(Icons.person, color: Colors.yellow)),
+                      child: Icon(Icons.person,
+                          color: Color.fromRGBO(255, 215, 1, 1))),
                   SizedBox(width: 20),
                   Text(
                     text,
@@ -117,7 +163,7 @@ class DetailsScreen extends StatelessWidget {
                   CircleAvatar(
                       backgroundColor: Color.fromRGBO(245, 245, 245, 1),
                       child: Icon(FontAwesomeIcons.building,
-                          color: Colors.yellow)),
+                          color: Color.fromRGBO(255, 215, 1, 1))),
                   SizedBox(width: 20),
                   Text(
                     dept,
@@ -141,7 +187,7 @@ class DetailsScreen extends StatelessWidget {
                   backgroundColor: Color.fromRGBO(245, 245, 245, 1),
                   child: Icon(
                     Icons.call,
-                    color: Colors.yellow,
+                    color: Color.fromRGBO(255, 215, 1, 1),
                   ),
                 ),
                 SizedBox(width: 20),
@@ -162,7 +208,7 @@ class DetailsScreen extends StatelessWidget {
                     backgroundColor: Color.fromRGBO(245, 245, 245, 1),
                     child: Icon(
                       Icons.mail_sharp,
-                      color: Colors.yellow,
+                      color: Color.fromRGBO(255, 215, 1, 1),
                     ),
                   ),
                   SizedBox(width: 20),
@@ -177,8 +223,8 @@ class DetailsScreen extends StatelessWidget {
               ),
             ),
 
-            //
-            SizedBox(height: 40),
+            // rest
+            SizedBox(height: 20),
             Padding(
               padding: EdgeInsets.only(right: 40),
               child: Row(
