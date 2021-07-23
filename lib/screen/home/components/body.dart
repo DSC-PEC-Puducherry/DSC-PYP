@@ -57,7 +57,7 @@ class _Drop1State extends State<Drop1> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 141,
+      width: 152,
       //padding: EdgeInsets.all(20),
       child: Column(
         children: <Widget>[
@@ -108,7 +108,7 @@ class _Drop2State extends State<Drop2> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 139,
+      width: 125,
       child: Column(
         children: <Widget>[
           DropdownButton<String>(
